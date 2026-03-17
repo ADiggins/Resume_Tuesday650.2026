@@ -1,0 +1,118 @@
+/* https://coolors.co/e36588-9a275a-ffffff-0b1d51-223127 */
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+    background-color: #223127;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Bebas Neue";
+}
+
+button {
+    font-family: "Bebas Neue"
+}
+
+body {
+    background-color: #ffffff;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 90vh;
+    border-radius: 20px;
+    box-shadow: 7px 7px 7px 7px rgba(253, 253, 253, 0.75);
+    position:relative;
+}
+
+my-header {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: #E36588 solid 5px;
+    width:100%;
+    font-size:20px;
+    /* height: 125px; */ /* work out how to establish height of header*/
+    /* box-shadow: 0px 0px 5px 5px black ; */
+}
+
+#navigationButtons {
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+}
+
+#navigationButtons button {
+    width:200px;
+    border: #9A275A solid 4px;
+    border-radius: 10px 10px 0px 0px;
+    height:35px;
+    border-bottom: none;
+    font-size:25px;
+}
+
+#contentButtons {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+
+#contentButtons button {
+    width: 300px;
+    height:100px;
+    border: #9A275A solid 6px;
+    border-radius: 20px;
+    font-size:24px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.753);
+}
+
+#contentButtons button, #navigationButtons button {
+    transition: border-color 0.3s linear;
+    /* transition: box-shadow 0.1s linear; */
+}
+
+#contentButtons button:hover, #navigationButtons button:hover {
+    border-color:#E36588;
+    /* box-shadow: 3px 3px 3px 3px rgba(255, 253, 138, 0.753); */
+}
+
+my-footer {
+    position:absolute;
+    bottom:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height:75px;
+    border-top: #E36588 solid 5px;
+}
+
+#opener {
+    border: black 5px solid;
+    border-radius: 30px;
+    background-color: #ffefef;
+    position:fixed;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 80px 50px;
+    font-size:30px;
+}
+
+#opener form {
+    display:flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+#opener input {
+    font-family: "Bebas Neue";
+    padding:5px;
+    font-size:30px;
+}

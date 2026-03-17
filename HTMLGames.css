@@ -1,0 +1,36 @@
+#bodyContent {
+    /* border: 1px black dotted; */
+    /* width: 300px; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+#gameNav {
+    /* border: 1px black dotted; */
+    display:flex;
+    flex-direction: row;
+    column-gap:20px;
+    margin-top:20px;
+}
+
+#gameNav button {
+    width:100px;
+    height:45px;
+    font-weight:bold;
+    font-size: 25px;
+    border:none;
+    border-bottom: 5px #9A275A solid;
+}
+
+#gameNav button:hover {
+    border-color: #E36588;
+}
+
+#gamePanel {
+    /* border: 1px black dotted; */
+    border: 5px black solid;
+    width:500px;
+    height:500px;
+}
