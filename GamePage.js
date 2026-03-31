@@ -10,21 +10,21 @@ function showSlide(newIndex) {
     slides[activeSlide].style.display = "block";
 }
 
-function showSlideWithAnimation(newIndex) {
-    animateSlideOut( slides[activeSlide] );
+function showSlideWithAnimation(newIndex, direction) {
+    animateSlideOut( slides[activeSlide], direction);
     activeSlide = (newIndex + slides.length) % slides.length;
-    animateSlideIn( slides[activeSlide] );
+    animateSlideIn( slides[activeSlide], direction );
 }
 
 function changeSlide(by) {
-    showSlideWithAnimation(activeSlide + by);
+    showSlideWithAnimation(activeSlide + by, by>0 ? 'left':'right' );
 }
 
-function animateSlideIn(slide) {
+function animateSlideIn(slide, direction) {
     slide.style.display = "block"
     slide.animate(
         [
-            { transform: 'translateX(-500px)' },
+            { transform: `translateX( ${ direction == 'right' ? '-500px':'500px' } )` },
             { transform: 'translateX(0px)' },
         ],
         {
@@ -32,11 +32,11 @@ function animateSlideIn(slide) {
         }
     )
 }
-function animateSlideOut(slide) {
+function animateSlideOut(slide, direction) {
     var thisAni = slide.animate(
         [
             { transform: 'translateX(0px)' },
-            { transform: 'translateX(500px)' },
+            { transform: `translateX(${ direction == 'right' ? '500px' : '-500px' } )` },
         ],
         {
             duration: 400

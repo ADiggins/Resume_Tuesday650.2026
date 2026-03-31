@@ -12,6 +12,7 @@ html {
     flex-direction: row;
     justify-content: center;
     font-family: "Bebas Neue";
+    overflow: hidden;
 }
 
 button {
@@ -28,6 +29,7 @@ body {
     border-radius: 20px;
     box-shadow: 7px 7px 7px 7px rgba(253, 253, 253, 0.75);
     position:relative;
+    overflow: hidden;
 }
 
 my-header {
@@ -89,9 +91,40 @@ my-footer {
     flex-direction: column;
     align-items: center;
     width:100%;
-    height:75px;
+    height:50px;
     border-top: #E36588 solid 5px;
+    transition: height 0.3s;
 }
+
+my-footer:hover {
+    height: 150px;
+}
+
+#footerForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding:10px;
+}
+
+#footerForm input {
+    font-size:18px;
+    font-family: "Bebas Neue"
+}
+
+.footerFormRow {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+#footer_row2 input {
+    flex:2;
+}
+#footer_row2 #footer_FormSubmit {
+    flex:1;
+}
+
 
 #opener {
     border: black 5px solid;

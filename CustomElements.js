@@ -19,7 +19,18 @@ class MyHeader extends HTMLElement {
 class MyFooter extends HTMLElement {
    connectedCallback() {
         this.innerHTML = `
-            <p> This'll be the footer content</p>
+            <p> ↓ ↓ Like you see? Get in contact! ↓ ↓ </p>
+            <form action="" id="footerForm">
+                <div class="footerFormRow" id="footer_row1">
+                    <input type="text" placeholder="NAME">
+                    <input type="text" placeholder="COMPANY">
+                    <input type="text" placeholder="EMAIL">
+                </div>
+                <div class="footerFormRow" id="footer_row2">
+                    <input type="text" placeholder="FEEDBACK">
+                    <input type="submit" id="footer_FormSubmit">
+                </div>
+            </form>
         `
    } 
 }
